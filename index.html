@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Juego Pokemon</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="pokemonGame">
+            <header></header>
+            <nav></nav>
+            <section>
+                <div class="scores">
+                    <label>Puntajes: </label>
+                    <label id="idPuntaje">0</label>
+                    <label>Intentos: </label>
+                    <label id="idIntentos">0</label>
+                    <label class="filas2">Selecciona el nombre de Pokémon correcto</label>
+                </div>
+                <div id="idimagen">
+                    <img id="idimg" src="/img/pnegro.jpg" alt="No disponible">
+                </div>
+                <div class="botones">
+                    <button id="idkeldeoordinary" onclick="adivinacion('idkeldeoordinary')">keldeo-ordinary</button>
+                    <button id="iddrilbur" onclick="adivinacion('iddrilbur')">drilbur</button>
+                    <button id="idninjask" onclick="adivinacion('idninjask')">ninjask</button>
+                    <button id="idexcadrill" onclick="adivinacion('idexcadrill')">excadrill</button>
+                    <div id="display">...</div>
+                    <button id="idreset" onclick="reset('idreset')">Reset</button>
+                </div>
+
+            </section>
+            <footer></footer>
+        </div>
+    </div>
+</body>
+
+</html>
