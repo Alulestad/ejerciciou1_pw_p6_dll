@@ -31,10 +31,21 @@ img {
     grid-template-rows: repeat(6, 30px);
     padding: 0px 10px;
 }
+.bottons{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: aquamarine;
+    border-radius: 8px;
+}
 
 #display {
     font-size: 12px;
+    border-radius: 7px;
     /* font-family: 'Times New Roman', Times, serif; */
     /* background-color: blue; */
     /* border: 3px solid black; */
+}
+
+#idreset {
+    background: gold;
+    border-radius: 7px;
 }

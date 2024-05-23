@@ -1,47 +1,49 @@
 
 
-var puntaje=0;
-var intento=0;
+var puntaje = 0;
+var intento = 0;
 
-function adivinacion(identificador){
-    
-    if(identificador=='idexcadrill'){
-        document.getElementById('idimg').src='/img/pcolor.jpg';
+function adivinacion(identificador) {
 
-        var display=document.getElementById('display');
-        display.innerText='Felicitaciones, has seleccionado la opción correcta';
-        display.style.background="blue";
-        display.style.fontFamily="'Times New Roman', Times, serif";
-        display.style.border="3px solid black";
+    if (identificador == 'idexcadrill') {
+        document.getElementById('idimg').src = '/img/pcolor.jpg';
 
-        console.log("Intentost: "+intento);
-        if(intento==0){
-            intento=intento+1;
-            puntaje=5;
-            document.getElementById('idIntentos').innerText=intento;
-            document.getElementById('idPuntaje').innerText=puntaje;
-            
-        }else if(intento==1){
-            puntaje=3;
-        }else if(intento==2){
-            puntaje=1;
+        var display = document.getElementById('display');
+        display.innerText = 'Felicitaciones, has seleccionado la opción correcta';
+        display.style.background = "blue";
+        display.style.fontFamily = "'Times New Roman', Times, serif";
+        display.style.border = "3px solid black";
+
+        console.log("Intentost: " + intento);
+        if (intento == 0) {
+            intento = intento + 1;
+            puntaje = 5;
+
+
+        } else if (intento == 1) {
+            puntaje = 3;
+        } else if (intento == 2) {
+            puntaje = 1;
         }
 
-        console.log("puntajes: "+puntaje);
+        document.getElementById('idIntentos').innerText = intento;
+        document.getElementById('idPuntaje').innerText = puntaje;
+
+        console.log("puntajes: " + puntaje);
 
 
-    }else{
-        var display=document.getElementById('display');
-        display.innerText='Pokémon incorrecto, intentalo nuevamente';
-        display.style.background="red";
-        display.style.fontFamily="'Times New Roman', Times, serif";
-        display.style.border="3px solid black";
+    } else {
+        var display = document.getElementById('display');
+        display.innerText = 'Pokémon incorrecto, intentalo nuevamente';
+        display.style.background = "red";
+        display.style.fontFamily = "'Times New Roman', Times, serif";
+        display.style.border = "3px solid black";
 
-        intento=intento+1;
-        console.log("Intentosf: "+intento);
-        document.getElementById('idIntentos').innerText=intento;
+        intento = intento + 1;
+        console.log("Intentosf: " + intento);
+        document.getElementById('idIntentos').innerText = intento;
 
-        if (intento==3){
+        if (intento == 3) {
             console.log("TENGO QUE RESETEAR");
             reset();
         }
@@ -51,18 +53,18 @@ function adivinacion(identificador){
 }
 
 
-function reset(){
-    var display=document.getElementById('display');
-        display.innerText='...';
-        display.style.background="";
-        display.style.fontFamily="";
-        display.style.border="";
+function reset() {
+    var display = document.getElementById('display');
+    display.innerText = '';
+    display.style.background = "";
+    display.style.fontFamily = "";
+    display.style.border = "";
 
-        document.getElementById('idimg').src='/img/pnegro.jpg';
+    document.getElementById('idimg').src = '/img/pnegro.jpg';
 
-        window.puntaje=0;
-        window.intento=0;
-        document.getElementById('idIntentos').innerText=intento;
-        document.getElementById('idPuntaje').innerText=puntaje;
+    window.puntaje = 0;
+    window.intento = 0;
+    document.getElementById('idIntentos').innerText = intento;
+    document.getElementById('idPuntaje').innerText = puntaje;
 }
 
